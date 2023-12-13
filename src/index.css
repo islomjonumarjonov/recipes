@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #fff;
+  --text-color: #111;
+  --link-colors: #333;
+  --delete: tomato;
+}
+
+.dark-mode {
+  --bg-color: #333;
+  --text-color: #fff;
+  --link-colors: #fff;
+  --delete: tomato;
+}
+
+/* fonts */
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/inter-v13-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/inter-v13-latin-500.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/inter-v13-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/poppins-v20-latin-regular.woff2") format("woff2");
+}
+
+@layer {
+  .cite-container {
+    @apply lg:max-w-7xl md:max-w-2xl sm:max-w-xl mx-auto px-5;
+  }
+
+  main {
+    @apply flex-grow;
+  }
+
+  html,
+  body,
+  #root {
+    @apply h-full;
+  }
+
+  body {
+    @apply font-poppins;
+  }
+
+  #root {
+    @apply flex flex-col;
+  }
+
+  .active {
+    @apply opacity-80;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  figure {
+    display: flex;
+  }
+  figure img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+  }
+}
